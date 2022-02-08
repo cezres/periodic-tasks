@@ -1,11 +1,11 @@
-name: Test
+name: Generate swift package collection
 
 on:
-  push:
-    branches: [ main ]
+  schedule:
+    - cron: "* 8 * * *"
     
 jobs:
-  build: 
+  generate: 
     runs-on: macos-latest
     
     steps:
@@ -16,9 +16,6 @@ jobs:
       run: cd ./swift-package-collection-generator && swift build --configuration release
     - name: run package-collection-generate
       run: |
-        pwd && ls
-        cd ./swift-package-collection-generator
-        pwd && ls
         ./.build/release/package-collection-generate ../packages.json ../collection.json 
     - name: push collection.json
       run: |
