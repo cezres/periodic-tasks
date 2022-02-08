@@ -13,12 +13,17 @@ jobs:
     - name: clone package-collection-generate
       run: git clone https://github.com/cezres/swift-package-collection-generator.git
     - name: build package-collection-generate
-      run: |
-        echo 22
-        pwd
-        ls
-        cd ./swift-package-collection-generator
-        swift build --configuration release
+      run: cd ./swift-package-collection-generator && swift build --configuration release
     - name: run package-collection-generate
-      run: echo 33
-
+      run: |
+        ./.build/release/package-collection-generate ../packages.json ../collection.json 
+        pwd && ls
+        cd ../
+        pwd && ls
+    - name: push collection.json
+      run: |
+        git config user.name 晨风
+        git config user.email cezres@163.com
+        git add ./collection.json
+        git commit -m "Update collection.json"
+        git push
