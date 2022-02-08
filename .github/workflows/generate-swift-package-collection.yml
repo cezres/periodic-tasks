@@ -15,9 +15,12 @@ jobs:
     - name: clone package-collection-generate
       run: git clone https://github.com/cezres/swift-package-collection-generator.git
     - name: build package-collection-generate
-      run: cd ./swift-package-collection-generator && swift build --configuration release
+      run: |
+        cd ./swift-package-collection-generator
+        swift build --configuration release
     - name: run package-collection-generate
       run: |
+        cd ./swift-package-collection-generator
         ./.build/release/package-collection-generate ../packages.json ../collection.json 
     - name: push collection.json
       run: |
