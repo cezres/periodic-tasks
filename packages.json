@@ -1,0 +1,29 @@
+{
+    "name": "My Collection",
+    "packages": [
+        {   
+            "url": "https://github.com/stephencelis/SQLite.swift.git"
+        },
+        {
+            "url": "https://github.com/pointfreeco/swift-composable-architecture.git"
+        },
+        {
+            "url": "https://github.com/google/swift-benchmark.git"
+        },
+        {
+            "url": "https://github.com/pointfreeco/combine-schedulers.git"
+        },
+        {
+            "url": "https://github.com/pointfreeco/swift-case-paths.git"
+        },
+        {
+            "url": "https://github.com/pointfreeco/swift-custom-dump.git"
+        },
+        {
+            "url": "https://github.com/pointfreeco/swift-identified-collections.git"
+        },
+        {
+            "url": "https://github.com/pointfreeco/xctest-dynamic-overlay.git"
+        }
+    ]
+  }
