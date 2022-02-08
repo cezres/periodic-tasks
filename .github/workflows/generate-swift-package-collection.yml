@@ -2,7 +2,7 @@ name: Generate swift package collection
 
 on:
   schedule:
-    - cron: "* 8 * * *"
+    - cron: "5 8 * * *"
     
 jobs:
   generate: 
