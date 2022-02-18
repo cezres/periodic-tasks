@@ -2,7 +2,7 @@ name: Generate swift package collection
 
 on:
   schedule:
-    - cron: "* 9 * * 1,4"
+    - cron: "0 9 * * 1,4"
 #   push:
 #     branches: [ main ]
 
