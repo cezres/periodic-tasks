@@ -24,6 +24,9 @@
         },
         {
             "url": "https://github.com/pointfreeco/xctest-dynamic-overlay.git"
+        },
+        {
+            "url": "https://github.com/EFPrefix/EFQRCode.git"
         }
     ]
   }
